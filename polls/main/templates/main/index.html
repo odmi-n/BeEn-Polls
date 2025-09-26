@@ -6,6 +6,15 @@
 </head>
 <body>
     <h1>main</h1>
-    <p>main index page</p>
+    <h2>調査項目</h2>
+    {% for question in question_list %}
+    <p>Q. {{ question }}</p>
+    {% endfor %}
+
+    {% if is_polled %}
+        <p>{{ polled_msg }}</p>
+    {% else %}
+        <p>{{ not_polled_msg }}</p>
+    {% endif %}
 </body>
 </html>
