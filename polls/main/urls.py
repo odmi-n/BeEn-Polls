@@ -1,7 +1,8 @@
-from django.urls import path  # path() 関数をインポート
+from django.urls import path
 
-from . import views  # ビュー関数を登録するため、views.py をインポート
+from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("<int:question_id>/", views.detail, name="detail"),
 ]
